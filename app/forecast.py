@@ -4,16 +4,11 @@ from os.path import dirname, join, realpath
 
 
 DIR_PATH = dirname(realpath(__file__))
-TEAM_LIST = {"kbo": ['Lotte-Giants',
-             'Hanwha-Eagles',
-             'Samsung-Lions',
-             'Kia-Tigers',
-             'KT-Wiz',
-             'NC-Dinos',
-             'LG-Twins',
-             'Kiwoom-Heroes',
-             'Doosan-Bears',
-             'SK-Wyverns'],
+TEAM_LIST = {"kbo": ['Doosan-Bears', 'Hanwha-Eagles',
+                     'KT-Wiz', 'Kia-Tigers', 'Kiwoom-Heroes',
+                     'LG-Twins', 'Lotte-Giants',
+                     'NC-Dinos', 'SK-Wyverns',
+                     'Samsung-Lions'],
             "mlb": ['arizona-diamondbacks',
                     'atlanta-braves',
                     'baltimore-orioles',
