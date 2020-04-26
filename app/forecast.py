@@ -64,7 +64,7 @@ def main():
     league = st.sidebar.selectbox("League", ["KBO", "MLB"]).lower()
 
 
-    if page=="Projection & Depth Chart":
+    if page=="Projections & Depth Charts":
         st.title("Projection")
         forecast = pd.read_csv(join(DIR_PATH, f"{league}_forecast_{year}.csv"))[['team_name',
                                                                          'batter_rating','rp_rating',
