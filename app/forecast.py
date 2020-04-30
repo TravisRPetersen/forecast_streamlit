@@ -78,7 +78,8 @@ def main():
     if page=="Depth Chart Image":
 
         kbo_team = st.sidebar.selectbox("Team", TEAM_LIST['kbo'])
-        depth_chart = plt.imread(join(DIR_PATH, f"{kbo_team}.png"))
-        st.image(depth_chart.astype(np.uint8))
+        #depth_chart = plt.imread(join(DIR_PATH, f"{kbo_team}.png"))
+        #st.image(depth_chart.astype(np.uint8))
+        st.image("https://storage.googleapis.com/baseball-forecast/kbo_depth_charts/Doosan-Bears.png")
 
 main()
