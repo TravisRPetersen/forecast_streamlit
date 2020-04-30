@@ -55,7 +55,7 @@ def streamlit_dataframe(results, team_list):
 
 def main():
 
-    page = st.sidebar.selectbox("Page", ["Projections & Depth Charts", "Player Value"])
+    page = st.sidebar.selectbox("Page", ["Projections & Depth Charts", "Player Value", "Depth Chart Image"])
     year = st.sidebar.selectbox("Year", ["2020", "2019"])
     league = st.sidebar.selectbox("League", ["KBO", "MLB"]).lower()
 
