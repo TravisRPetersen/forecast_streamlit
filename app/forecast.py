@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from matplotlib import pyplot as plt
 import streamlit as st
 from os.path import dirname, join, realpath
@@ -78,8 +79,6 @@ def main():
 
         kbo_team = st.sidebar.selectbox("Team", TEAM_LIST['kbo'])
         depth_chart = plt.imread(join(DIR_PATH, f"{kbo_team}.png"))
-        plt.imshow(depth_chart)
-        plt.show()
-
+        st.image(depth_chart.astype(np.uint8))
 
 main()
