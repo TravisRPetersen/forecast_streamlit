@@ -1,4 +1,5 @@
 import pandas as pd
+from matplotlib import pyplot as plt
 import streamlit as st
 from os.path import dirname, join, realpath
 
@@ -72,6 +73,13 @@ def main():
 
     if page=="Player Value":
         st.markdown("Not ready")
+
+    if page=="Depth Chart Image":
+
+        kbo_team = st.sidebar.selectbox("Team", TEAM_LIST['kbo'])
+        depth_chart = plt.imread(f"https://storage.googleapis.com/baseball-forecast/kbo_depth_charts/{kbo_team}.png")
+        plt.imshow(depth_chart)
+        plt.show()
 
 
 main()

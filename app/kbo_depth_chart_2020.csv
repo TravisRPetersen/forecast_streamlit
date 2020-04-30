@@ -1,6 +1,6 @@
 player_name,team_name,position,player_rating,PO_group
-Raul Alcantara,Doosan-Bears,SP,62.0,starting_pitcher
 Chris Flexen,Doosan-Bears,SP,72.0,starting_pitcher
+Raul Alcantara,Doosan-Bears,SP,62.0,starting_pitcher
 Lee Young-ha,Doosan-Bears,SP,61.0,starting_pitcher
 Yu Hui-kwan,Doosan-Bears,SP,61.0,starting_pitcher
 Lee Yong-chan,Doosan-Bears,SP,61.0,starting_pitcher
@@ -83,8 +83,8 @@ Koo Seung-min,Lotte-Giants,RP,56.0,relief_pitcher
 Choi Young-hwan,Lotte-Giants,RP,56.0,relief_pitcher
 Song Seung-jun,Lotte-Giants,RP,55.0,relief_pitcher
 Jang Won-sam,Lotte-Giants,RP,55.0,relief_pitcher
-Drew Rucinski,NC-Dinos,SP,64.0,starting_pitcher
 Mike Wright,NC-Dinos,SP,71.0,starting_pitcher
+Drew Rucinski,NC-Dinos,SP,64.0,starting_pitcher
 Koo Chang-mo,NC-Dinos,SP,62.0,starting_pitcher
 Lee Jae-hak,NC-Dinos,SP,61.0,starting_pitcher
 Park Jin-woo,NC-Dinos,SP,60.0,starting_pitcher
@@ -95,9 +95,9 @@ Kim Jin-sung,NC-Dinos,RP,56.0,relief_pitcher
 Jang Hyun-shik,NC-Dinos,RP,55.0,relief_pitcher
 Won Jong-hyun,NC-Dinos,RP,58.0,relief_pitcher
 Kim Geon-tae,NC-Dinos,RP,55.0,relief_pitcher
-Choi Chae-heung,Samsung-Lions,SP,60.0,starting_pitcher
 Ben Lively,Samsung-Lions,SP,68.0,starting_pitcher
 David Buchanan,Samsung-Lions,SP,68.0,starting_pitcher
+Choi Chae-heung,Samsung-Lions,SP,60.0,starting_pitcher
 Baek Jung-hyun,Samsung-Lions,SP,57.0,starting_pitcher
 Won Tae-in,Samsung-Lions,SP,57.0,starting_pitcher
 Oh Seung-hwan,Samsung-Lions,RP,71.0,relief_pitcher
@@ -183,7 +183,7 @@ Kim Min-soo,Lotte-Giants,3B,56.0,batter
 An Chi-hong,Lotte-Giants,2B,67.0,batter
 Han Dong-hee,Lotte-Giants,1B,59.0,batter
 Kim Chan-hyung,NC-Dinos,SS,66.0,batter
-Na Sung-bum,NC-Dinos,RF,65.0,batter
+Na Sung-bum,NC-Dinos,RF,67.0,batter
 Lee Myung-gi,NC-Dinos,LF,60.0,batter
 Park Suk-min,NC-Dinos,DH,64.0,batter
 Aaron Altherr,NC-Dinos,CF,70.0,batter
@@ -201,6 +201,7 @@ Kang Min-ho,Samsung-Lions,C,64.0,batter
 Lee Won-seok,Samsung-Lions,3B,63.0,batter
 Tyler Saladino,Samsung-Lions,2B,71.0,batter
 Choi Young-jin,Samsung-Lions,1B,58.0,batter
+Kim Sung-hyun,SK-Wyverns,SS,59.0,batter
 Han Dong-min,SK-Wyverns,RF,65.0,batter
 Noh Soo-kwang,SK-Wyverns,LF,61.0,batter
 Chae Tae-in,SK-Wyverns,DH,61.0,batter
