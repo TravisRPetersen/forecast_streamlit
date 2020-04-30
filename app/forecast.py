@@ -77,7 +77,7 @@ def main():
     if page=="Depth Chart Image":
 
         kbo_team = st.sidebar.selectbox("Team", TEAM_LIST['kbo'])
-        depth_chart = plt.imread(f"kbo_depth_charts/{kbo_team}.png")
+        depth_chart = plt.imread(f"{kbo_team}.png")
         plt.imshow(depth_chart)
         plt.show()
 
