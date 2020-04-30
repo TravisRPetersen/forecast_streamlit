@@ -78,6 +78,6 @@ def main():
     if page=="Depth Chart Image":
 
         kbo_team = st.sidebar.selectbox("Team", TEAM_LIST['kbo'])
-        st.image(f"https://storage.googleapis.com/baseball-forecast/kbo_depth_charts/{kbo_team}.png", width=200)
+        st.image(f"https://storage.googleapis.com/baseball-forecast/kbo_depth_charts/{kbo_team}.png")
 
 main()
