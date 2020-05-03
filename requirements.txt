@@ -2,3 +2,4 @@ numpy==1.18.3
 pandas==1.0.3
 streamlit==0.58.0
 matplotlib==3.2.1
+google-cloud-storage
