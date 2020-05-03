@@ -6,7 +6,8 @@ import json
 from os.path import dirname, join, realpath
 from os import environ
 
-creds_file = environ.get("GOOGLE_APPLICATION_CREDENTIALS")
+#creds_file = environ.get("GOOGLE_APPLICATION_CREDENTIALS")
+creds_file = environ.get("GOOGLE_CREDENTIALS")
 st.write(json.loads(creds_file))
 
 logger = logging.getLogger(__name__)
