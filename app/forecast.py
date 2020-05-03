@@ -94,7 +94,7 @@ def main():
 
         st.write("Predictions")
         try:
-            #game_schedule = {}
+            # game_schedule = {}
             games_on_date = game_schedule[date]
 
             st.dataframe((pd.DataFrame(games_on_date)
