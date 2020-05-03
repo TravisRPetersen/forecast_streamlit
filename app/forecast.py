@@ -45,10 +45,10 @@ TEAM_LIST = {"kbo": ['Doosan-Bears', 'Hanwha-Eagles',
                     'washington-nationals']
              }
 
-#storage_client = storage.Client().create_anonymous_client()
-#bucket = storage_client.bucket(bucket_name="baseball-forecast", user_project=None)
-#blob = bucket.blob('kbo_schedule/game_data.json')
-#game_schedule = json.loads(blob.download_as_string(client=None))
+storage_client = storage.Client().create_anonymous_client()
+bucket = storage_client.bucket(bucket_name="baseball-forecast", user_project=None)
+blob = bucket.blob('kbo_schedule/game_data.json')
+game_schedule = json.loads(blob.download_as_string(client=None))
 
 def streamlit_dataframe(results, team_list):
     st.subheader("Team ratings are an average of player subgroup ratings\nExplore those ratings by team here")
@@ -94,7 +94,7 @@ def main():
 
         st.write("Predictions")
         try:
-            game_schedule = {}
+            #game_schedule = {}
             games_on_date = game_schedule[date]
 
             st.dataframe((pd.DataFrame(games_on_date)
