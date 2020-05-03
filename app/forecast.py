@@ -92,7 +92,7 @@ def main():
 
         date = st.date_input("Game Date").strftime("%Y%m%d")
 
-        st.write("Prediction")
+        st.write("Predictions")
         try:
             games_on_date = game_schedule[date]
 
