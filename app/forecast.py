@@ -47,7 +47,7 @@ TEAM_LIST = {"kbo": ['Doosan-Bears', 'Hanwha-Eagles',
                     'toronto-blue-jays',
                     'washington-nationals']
              }
-t
+
 storage_client = storage.Client().from_service_account_json(creds_file)
 bucket = storage_client.bucket(bucket_name="baseball-forecast", user_project=None)
 blob = bucket.blob('kbo_schedule/game_data.json')
