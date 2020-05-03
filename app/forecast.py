@@ -91,6 +91,8 @@ def main():
     if page=="Game Predictions":
 
         date = st.date_input("Game Date").strftime("%Y%m%d")
+
+        st.write("Predictions")
         try:
             games_on_date = game_schedule[date]
 
