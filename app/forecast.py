@@ -7,6 +7,7 @@ from os.path import dirname, join, realpath
 from os import environ
 
 creds_file = environ.get("GOOGLE_APPLICATION_CREDENTIALS")
+st.write(json.loads(creds_file))
 
 logger = logging.getLogger(__name__)
 
@@ -48,10 +49,10 @@ TEAM_LIST = {"kbo": ['Doosan-Bears', 'Hanwha-Eagles',
                     'washington-nationals']
              }
 
-storage_client = storage.Client().from_service_account_json(creds_file)
-bucket = storage_client.bucket(bucket_name="baseball-forecast", user_project=None)
-blob = bucket.blob('kbo_schedule/game_data.json')
-game_schedule = json.loads(blob.download_as_string(client=None))
+#storage_client = storage.Client().from_service_account_json(creds_file)
+#bucket = storage_client.bucket(bucket_name="baseball-forecast", user_project=None)
+#blob = bucket.blob('kbo_schedule/game_data.json')
+#game_schedule = json.loads(blob.download_as_string(client=None))
 
 def streamlit_dataframe(results, team_list):
     st.subheader("Team ratings are an average of player subgroup ratings\nExplore those ratings by team here")
