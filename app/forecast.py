@@ -4,6 +4,9 @@ from google.cloud import storage
 import logging
 import json
 from os.path import dirname, join, realpath
+from os import environ
+
+creds_file = environ.get("GOOGLE_APPLICATION_CREDENTIALS")
 
 logger = logging.getLogger(__name__)
 
@@ -44,8 +47,8 @@ TEAM_LIST = {"kbo": ['Doosan-Bears', 'Hanwha-Eagles',
                     'toronto-blue-jays',
                     'washington-nationals']
              }
-
-storage_client = storage.Client().create_anonymous_client()
+t
+storage_client = storage.Client().from_service_account_json(creds_file)
 bucket = storage_client.bucket(bucket_name="baseball-forecast", user_project=None)
 blob = bucket.blob('kbo_schedule/game_data.json')
 game_schedule = json.loads(blob.download_as_string(client=None))
