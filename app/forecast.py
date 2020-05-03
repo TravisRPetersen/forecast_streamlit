@@ -1,9 +1,11 @@
 import pandas as pd
-import numpy as np
-from matplotlib import pyplot as plt
 import streamlit as st
+from google.cloud import storage
+import logging
+import json
 from os.path import dirname, join, realpath
 
+logger = logging.getLogger(__name__)
 
 DIR_PATH = dirname(realpath(__file__))
 TEAM_LIST = {"kbo": ['Doosan-Bears', 'Hanwha-Eagles',
@@ -43,6 +45,11 @@ TEAM_LIST = {"kbo": ['Doosan-Bears', 'Hanwha-Eagles',
                     'washington-nationals']
              }
 
+storage_client = storage.Client().create_anonymous_client()
+bucket = storage_client.bucket(bucket_name="baseball-forecast", user_project=None)
+blob = bucket.blob('kbo_schedule/game_data.json')
+game_schedule = json.loads(blob.download_as_string(client=None))
+
 def streamlit_dataframe(results, team_list):
     st.subheader("Team ratings are an average of player subgroup ratings\nExplore those ratings by team here")
 
@@ -56,7 +63,7 @@ def streamlit_dataframe(results, team_list):
 
 def main():
 
-    page = st.sidebar.selectbox("Page", ["Projections & Depth Charts", "Player Value", "Depth Chart Image"])
+    page = st.sidebar.selectbox("Page", ["Projections & Depth Charts", "Game Predictions","Player Value", "Depth Chart Image"])
     year = st.sidebar.selectbox("Year", ["2020", "2019"])
     league = st.sidebar.selectbox("League", ["KBO", "MLB"]).lower()
 
@@ -80,5 +87,24 @@ def main():
         kbo_team = st.sidebar.selectbox("Team", TEAM_LIST['kbo'])
         st.write(kbo_team)
         st.image(f"https://storage.googleapis.com/baseball-forecast/kbo_depth_charts/{kbo_team}.png")
+
+    if page=="Game Predictions":
+
+        date = st.date_input("Game Date").strftime("%Y%m%d")
+        try:
+            games_on_date = game_schedule[date]
+
+            st.dataframe((pd.DataFrame(games_on_date)
+             .T
+             .astype({"home_win_proj": float})
+             .round(2)
+             .rename(columns={"away_team": "Away",
+                              "home_team": "Home",
+                              "home_win_proj": "Home Win Pct"})
+             .reset_index(drop=True)
+             .style.format({'Home Win Pct': '{:.0%}'})))
+        except Exception as e:
+            logger.info(e)
+            st.write("No scheduled games for date")
 
 main()
