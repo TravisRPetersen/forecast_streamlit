@@ -69,16 +69,15 @@ def streamlit_dataframe(results, team_list):
 def main():
 
     page = st.sidebar.selectbox("Page", ["Projections & Depth Charts", "Game Predictions", "Depth Chart Image"])
-    year = st.sidebar.selectbox("Year", ["2020", "2019"])
+    year = st.sidebar.selectbox("Year", ["2020"])
     league = st.sidebar.selectbox("League", ["KBO", "MLB"]).lower()
 
 
     if page=="Projections & Depth Charts":
         st.title("Projection")
-        forecast = pd.read_csv(join(DIR_PATH, f"{league}_forecast_{year}.csv"))[['team_name',
-                                                                         'batter_rating','rp_rating',
-                                                                         'sp_rating','proj_win_pct']]
-        st.dataframe(forecast)
+        forecast = pd.read_csv(join(f"gs://baseball-forecast/projected_standings/{league}_forecast_{year}.csv"))
+        st.dataframe(forecast.style.format({'championship': '{:.0%}',
+                                            'playoff_appearance': '{:.0%}'}))
 
         st.title("Depth Chart")
         results = pd.read_csv(join(DIR_PATH, f'{league}_depth_chart_{year}.csv'))
