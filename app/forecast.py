@@ -68,7 +68,7 @@ def streamlit_dataframe(results, team_list):
 
 def main():
 
-    page = st.sidebar.selectbox("Page", ["Projections & Depth Charts", "Game Predictions", "Depth Chart Image"])
+    page = st.sidebar.selectbox("Page", ["Projections & Depth Charts", "Game Predictions", "Depth Chart Image", "About"])
     year = st.sidebar.selectbox("Year", ["2020"])
     league = st.sidebar.selectbox("League", ["KBO", "MLB"]).lower()
 
@@ -97,14 +97,15 @@ def main():
         kbo_team = st.sidebar.selectbox("Team", TEAM_LIST['kbo'])
         st.write(kbo_team)
         st.image(f"https://storage.googleapis.com/baseball-forecast/kbo_depth_charts/{kbo_team}.png")
-    st.markdown(
-        """##Note: 
-
-            These depth charts are a pre-season estimate and will not be updated on a regular basis. 
-            Starting pitchers are on the left-side of the graphic and relief pitchers on the right-side of the graphic.
-            
+        st.markdown(
             """
-                )
+                ##Note: 
+    
+                These depth charts are a pre-season estimate and will not be updated on a regular basis. 
+                Starting pitchers are on the left-side of the graphic and relief pitchers on the right-side of the graphic.
+                
+                """
+                    )
 
     if page=="Game Predictions":
 
@@ -130,7 +131,8 @@ def main():
 
     if page=="About":
         st.markdown(
-            """##About: 
+            """
+                ##About: 
     
                 The goal of this app is to give provide a league-level forecast based on player ratings. 
                 Player ratings are based on WAR, with 70 as MLB replacement level. 
