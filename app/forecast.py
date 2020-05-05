@@ -56,8 +56,12 @@ blob = bucket.blob('kbo_schedule/game_data.json')
 game_schedule = json.loads(blob.download_as_string(client=None))
 
 def streamlit_dataframe(results, team_list):
-    st.subheader("Team ratings are an average of player subgroup ratings\nExplore those ratings by team here. "
-                 "These depth charts are a pre-season estimate and will not be updated on a regular basis. ")
+    st.subheader("Team ratings are an average of player subgroup ratings")
+    st.markdown(""" 
+                 Explore those ratings by team here. The depth charts are a pre-season estimate 
+                 and will be updated periodically. Feel free to send me updates 
+                 [@TravisRPetersen(https://twitter.com/TravisRPetersen) 
+                 """)
 
     #filter_table = filter_results(results, number_of_rows, number_of_columns, style)
     TEAMS_SELECTED = st.multiselect('Select team', team_list)
@@ -96,13 +100,11 @@ def main():
     if page=="Depth Chart Image":
 
         kbo_team = st.sidebar.selectbox("Team", TEAM_LIST['kbo'])
-        st.write(kbo_team)
         st.subheader(f"{kbo_team}:")
         st.image(f"https://storage.googleapis.com/baseball-forecast/kbo_depth_charts/{kbo_team}.png")
+        st.subheader("Note:")
         st.markdown(
-            """
-                ##Note: 
-    
+            """    
                 These depth charts are a pre-season estimate and will not be updated on a regular basis. 
                 Starting pitchers are on the left-side of the graphic and relief pitchers on the right-side of the graphic.
                 
