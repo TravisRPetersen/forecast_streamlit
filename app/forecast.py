@@ -97,6 +97,14 @@ def main():
         kbo_team = st.sidebar.selectbox("Team", TEAM_LIST['kbo'])
         st.write(kbo_team)
         st.image(f"https://storage.googleapis.com/baseball-forecast/kbo_depth_charts/{kbo_team}.png")
+    st.markdown(
+        """##Note: 
+
+            These depth charts are a pre-season estimate and will not be updated on a regular basis. 
+            Starting pitchers are on the left-side of the graphic and relief pitchers on the right-side of the graphic.
+            
+            """
+                )
 
     if page=="Game Predictions":
 
@@ -119,5 +127,38 @@ def main():
         except Exception as e:
             logger.info(e)
             st.write("No scheduled games for date")
+
+    if page=="About":
+        st.markdown(
+            """##About: 
+    
+                The goal of this app is to give provide a league-level forecast based on player ratings. 
+                Player ratings are based on WAR, with 70 as MLB replacement level. 
+                WAR estimates are based on a marcel-style (http://www.tangotiger.net/archives/stud0346.shtml) 
+                weighted average of recent seasons using WAR from [kbreport](http://www.kbreport.com/main) 
+                and [steamer projections](steamerprojections.com).
+                
+                
+                A rough guide to the ratings:
+                
+                *	90: MLB All-Star
+                *	80: MLB Starter
+                *	70: MLB replacement level
+                *	60: AA/AAA
+                *	50: A/AA
+                *	40: is Rk/NCAA-1
+                
+                The player ratings and forecasts are very much a work in progress and any feedback is welcome!
+                
+                Notes:
+                *	The model does not have access to daily lineups at the moment, so it won’t 
+                know if a player is injured or sitting for that day
+                *	The lineups are set using best estimates pre-season of lineups
+                *	The depth charts only include 21 players (9 batters, 5 starters, and 7 relief pitchers)
+
+                
+                """
+                )
+
 
 main()
