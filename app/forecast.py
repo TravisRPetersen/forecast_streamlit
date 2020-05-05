@@ -131,7 +131,9 @@ def main():
                               "away_score": "Away Score",
                               "home_win_proj": "Home Win Pct"})
              .reset_index(drop=True)
-             .style.format({'Home Win Pct': '{:.0%}'})))
+             .style.format({'Home Win Pct': '{:.0%}',
+                            'Home Score': '{:.0f}',
+                            'Away Score': '{:.0f}'})))
         except Exception as e:
             logger.info(e)
             st.write("No scheduled games for date")
