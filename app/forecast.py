@@ -60,7 +60,7 @@ def streamlit_dataframe(results, team_list):
     st.markdown(""" 
                  Explore those ratings by team here. The depth charts are a pre-season estimate 
                  and will be updated periodically. Feel free to send me updates 
-                 [@TravisRPetersen(https://twitter.com/TravisRPetersen) 
+                 [@TravisRPetersen](https://twitter.com/TravisRPetersen) 
                  """)
 
     #filter_table = filter_results(results, number_of_rows, number_of_columns, style)
@@ -144,11 +144,10 @@ def main():
             """    
                 The goal of this app is to give provide a league-level forecast based on player ratings. 
                 Player ratings are based on WAR, with 70 as MLB replacement level. 
-                WAR estimates are based on a marcel-style (http://www.tangotiger.net/archives/stud0346.shtml) 
+                WAR estimates are based on a [marcel-style](http://www.tangotiger.net/archives/stud0346.shtml) 
                 weighted average of recent seasons using WAR from [kbreport](http://www.kbreport.com/main) 
                 and [steamer projections](steamerprojections.com). [MyKBO](https://mykbostats.com/) has been an 
                 essential resource for gathering information about depth charts.
-                
                 
                 A rough guide to the ratings:
                 
@@ -157,7 +156,7 @@ def main():
                 *	70: MLB replacement level
                 *	60: AA/AAA
                 *	50: A/AA
-                *	40: is Rk/NCAA-1
+                *	40: Rk/NCAA-1
                 
                 The player ratings and forecasts are very much a work in progress and any feedback is welcome!
                 
