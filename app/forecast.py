@@ -136,7 +136,8 @@ def main():
                 Player ratings are based on WAR, with 70 as MLB replacement level. 
                 WAR estimates are based on a marcel-style (http://www.tangotiger.net/archives/stud0346.shtml) 
                 weighted average of recent seasons using WAR from [kbreport](http://www.kbreport.com/main) 
-                and [steamer projections](steamerprojections.com).
+                and [steamer projections](steamerprojections.com). [MyKBO](https://mykbostats.com/) has been an 
+                essential resource for gathering information about depth charts.
                 
                 
                 A rough guide to the ratings:
