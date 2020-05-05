@@ -76,9 +76,15 @@ def main():
     if page=="Projections & Depth Charts":
         st.title("Projection")
         forecast = pd.read_csv(join(f"gs://baseball-forecast/projected_standings/{league}_forecast_{year}.csv"))
-        st.dataframe(forecast.style.format({'championship': '{:.0%}',
-                                            'playoff_appearance': '{:.0%}'}))
-
+        st.dataframe(forecast.style.format({'champion': '{:.1%}',
+                                            'playoff_appearance': '{:.1%}',
+                                            'proj_win_pct': '{:.3f}',
+                                            'projected_wins': '{:.1f}',
+                                            'current_wins': '{:.0f}',
+                                            'batter_rating': '{:.0f}',
+                                            'rp_rating': '{:.0f}',
+                                            'sp_rating': '{:.0f}'}
+                                           ))
         st.title("Depth Chart")
         results = pd.read_csv(join(DIR_PATH, f'{league}_depth_chart_{year}.csv'))
         streamlit_dataframe(results, TEAM_LIST[league])
