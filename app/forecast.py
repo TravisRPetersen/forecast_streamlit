@@ -56,7 +56,8 @@ blob = bucket.blob('kbo_schedule/game_data.json')
 game_schedule = json.loads(blob.download_as_string(client=None))
 
 def streamlit_dataframe(results, team_list):
-    st.subheader("Team ratings are an average of player subgroup ratings\nExplore those ratings by team here")
+    st.subheader("Team ratings are an average of player subgroup ratings\nExplore those ratings by team here. "
+                 "These depth charts are a pre-season estimate and will not be updated on a regular basis. ")
 
     #filter_table = filter_results(results, number_of_rows, number_of_columns, style)
     TEAMS_SELECTED = st.multiselect('Select team', team_list)
@@ -96,6 +97,7 @@ def main():
 
         kbo_team = st.sidebar.selectbox("Team", TEAM_LIST['kbo'])
         st.write(kbo_team)
+        st.subheader(f"{kbo_team}:")
         st.image(f"https://storage.googleapis.com/baseball-forecast/kbo_depth_charts/{kbo_team}.png")
         st.markdown(
             """
@@ -130,10 +132,9 @@ def main():
             st.write("No scheduled games for date")
 
     if page=="About":
+        st.subheader("About:")
         st.markdown(
-            """
-                ##About: 
-    
+            """    
                 The goal of this app is to give provide a league-level forecast based on player ratings. 
                 Player ratings are based on WAR, with 70 as MLB replacement level. 
                 WAR estimates are based on a marcel-style (http://www.tangotiger.net/archives/stud0346.shtml) 
