@@ -126,6 +126,9 @@ def main():
              .round(2)
              .rename(columns={"away_team": "Away",
                               "home_team": "Home",
+                              "status": "Status",
+                              "home_score": "Home Score",
+                              "away_score": "Away Score",
                               "home_win_proj": "Home Win Pct"})
              .reset_index(drop=True)
              .style.format({'Home Win Pct': '{:.0%}'})))
