@@ -51,7 +51,7 @@ TEAM_LIST = {"kbo": ['Doosan-Bears', 'Hanwha-Eagles',
                     'washington-nationals']
              }
 
-date = (datetime.today() + timedelta(hours=6)).strftime("%Y%m%d")
+date = (datetime.today() + timedelta(hours=9)).strftime("%Y%m%d")
 storage_client = storage.Client().from_service_account_json("google-credentials.json")
 bucket = storage_client.bucket(bucket_name="baseball-forecast", user_project=None)
 blob = bucket.blob(f'kbo_schedule/game_data_{date}.json')
@@ -83,7 +83,7 @@ def main():
     if page=="Projections & Depth Charts":
         st.title("Projection")
         if league=="kbo":
-            date = (datetime.today() + timedelta(hours=6)).strftime("%Y%m%d")
+            date = (datetime.today() + timedelta(hours=9)).strftime("%Y%m%d")
             projection_url = f"gs://baseball-forecast/projected_standings/{league}_forecast_{year}_{date}.csv"
         else:
             projection_url = f"gs://baseball-forecast/projected_standings/{league}_forecast_{year}.csv"
