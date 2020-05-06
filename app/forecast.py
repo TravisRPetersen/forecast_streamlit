@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+from datetime import datetime, timedelta
 from google.cloud import storage
 import logging
 import json
@@ -50,9 +51,10 @@ TEAM_LIST = {"kbo": ['Doosan-Bears', 'Hanwha-Eagles',
                     'washington-nationals']
              }
 
+date = (datetime.today() + timedelta(hours=12)).strftime("%Y%m%d")
 storage_client = storage.Client().from_service_account_json("google-credentials.json")
 bucket = storage_client.bucket(bucket_name="baseball-forecast", user_project=None)
-blob = bucket.blob('kbo_schedule/game_data.json')
+blob = bucket.blob(f'kbo_schedule/game_data_{date}.json')
 game_schedule = json.loads(blob.download_as_string(client=None))
 
 def streamlit_dataframe(results, team_list):
@@ -80,7 +82,12 @@ def main():
 
     if page=="Projections & Depth Charts":
         st.title("Projection")
-        forecast = pd.read_csv(join(f"gs://baseball-forecast/projected_standings/{league}_forecast_{year}.csv"))
+        if league=="KBO":
+            date = (datetime.today() + timedelta(hours=12)).strftime("%Y%m%d")
+            projection_url = f"gs://baseball-forecast/projected_standings/{league}_forecast_{year}_{date}.csv"
+        else:
+            projection_url = f"gs://baseball-forecast/projected_standings/{league}_forecast_{year}.csv"
+        forecast = pd.read_csv(projection_url)
         st.dataframe(forecast.style.format({'champion': '{:.1%}',
                                             'playoff_appearance': '{:.1%}',
                                             'proj_win_pct': '{:.3f}',
