@@ -82,7 +82,7 @@ def main():
 
     if page=="Projections & Depth Charts":
         st.title("Projection")
-        if league=="KBO":
+        if league=="kbo":
             date = (datetime.today() + timedelta(hours=12)).strftime("%Y%m%d")
             projection_url = f"gs://baseball-forecast/projected_standings/{league}_forecast_{year}_{date}.csv"
         else:
