@@ -1,0 +1,151 @@
+player_name,team_name,position,position_rank,cba_id,player_rating,PO_group
+Mulhearn Scott,Kotlarka-Praha,SS,SS,442.0,45.1,batter
+Novák Jan,Kotlarka-Praha,SP,SP-1,472.0,48.0,starting_pitcher
+Padyšák Daniel,Kotlarka-Praha,SP,SP-2,494.0,42.0,starting_pitcher
+Ercoli Lukáš,Kotlarka-Praha,SP,SP-3,144.0,38.1,starting_pitcher
+Dupal Štěpán,Kotlarka-Praha,RP,RP-1,123.0,33.8,relief_pitcher
+Král Michael,Kotlarka-Praha,RP,RP-2,328.0,36.7,relief_pitcher
+Cihlář Josef,Kotlarka-Praha,RP,RP-3,98.0,37.2,relief_pitcher
+Šůcha Matěj,Kotlarka-Praha,RF,RF,753.0,38.1,batter
+Mužík Martin,Kotlarka-Praha,LF,LF,445.0,41.7,batter
+Aubrecht Ivan,Kotlarka-Praha,DH,DH,7.0,39.9,batter
+Blažka Ondřej,Kotlarka-Praha,CF,CF,42.0,39.4,batter
+Vavruša Daniel,Kotlarka-Praha,C,C,655.0,45.1,batter
+Puš Jáchym,Kotlarka-Praha,3B,3B,855.0,36.7,batter
+Smola Filip,Kotlarka-Praha,2B,2B,602.0,33.8,batter
+Sládek Jakub,Kotlarka-Praha,1B,1B,599.0,41.7,batter
+Schneider Martin,Draci-Brno,SS,SS,581.0,44.6,batter
+Chroust Radim,Draci-Brno,SP,SP-1,95.0,43.2,starting_pitcher
+Furko Ondřej,Draci-Brno,SP,SP-2,166.0,40.3,starting_pitcher
+Schneider Martin,Draci-Brno,SP,SP-3,581.0,39.0,starting_pitcher
+Čapka Filip,Draci-Brno,RP,RP-1,759.0,33.8,relief_pitcher
+Večerka Viktor,Draci-Brno,RP,RP-2,1170.0,36.7,relief_pitcher
+Vašourek Jan,Draci-Brno,RP,RP-3,658.0,38.1,relief_pitcher
+Hajtmar Adam,Draci-Brno,RF,RF,188.0,40.8,batter
+Moštěk Filip,Draci-Brno,LF,LF,437.0,41.7,batter
+Polanský Tomáš,Draci-Brno,DH,DH,527.0,40.3,batter
+Dubový Arnošt,Draci-Brno,CF,CF,128.0,44.6,batter
+Řehůřek Lukáš,Draci-Brno,C,C,451.0,37.6,batter
+Červinka Tomáš,Draci-Brno,3B,3B,768.0,33.8,batter
+Hajtmar Jakub,Draci-Brno,2B,2B,189.0,43.6,batter
+Chroust Přemek,Draci-Brno,1B,1B,94.0,43.6,batter
+Kubica Jakub,Arrows-Ostrava,SS,SS,330.0,41.3,batter
+Satoria Ondřej,Arrows-Ostrava,SP,SP-1,579.0,45.1,starting_pitcher
+Bokaj Boris,Arrows-Ostrava,SP,SP-2,46.0,41.7,starting_pitcher
+Ondra Tomáš,Arrows-Ostrava,SP,SP-3,482.0,33.8,starting_pitcher
+Vykoukal Marko,Arrows-Ostrava,RP,RP-1,680.0,41.3,relief_pitcher
+Satoria Matěj,Arrows-Ostrava,RP,RP-2,578.0,37.6,relief_pitcher
+Kubovčík Martin,Arrows-Ostrava,RP,RP-3,332.0,38.5,relief_pitcher
+Černý Daniel,Arrows-Ostrava,RF,RF,765.0,37.6,batter
+Navrátil Aleš,Arrows-Ostrava,LF,LF,455.0,41.3,batter
+Juněc Tomáš,Arrows-Ostrava,DH,DH,260.0,47.5,batter
+Malík Jakub,Arrows-Ostrava,CF,CF,391.0,45.1,batter
+Vykoukal Michael,Arrows-Ostrava,C,C,681.0,44.1,batter
+Kubica Jakub,Arrows-Ostrava,3B,3B,330.0,41.3,batter
+Novotný Radim,Arrows-Ostrava,2B,2B,470.0,33.8,batter
+Grepl Jakub,Arrows-Ostrava,1B,1B,177.0,40.3,batter
+Zýma Petr,Eagles-Praha,SS,SS,722.0,45.1,batter
+Duffek Tomáš,Eagles-Praha,SP,SP-1,133.0,45.1,starting_pitcher
+Hegr Ondřej,Eagles-Praha,SP,SP-2,1152.0,39.0,starting_pitcher
+Eagles-Praha-SP-3,Eagles-Praha,SP,SP-3,,33.8,starting_pitcher
+Bužga Vojtěch,Eagles-Praha,RP,RP-1,69.0,38.1,relief_pitcher
+Blažek Šimon,Eagles-Praha,RP,RP-2,41.0,36.7,relief_pitcher
+Kvapil Ondřej,Eagles-Praha,RP,RP-3,1153.0,37.2,relief_pitcher
+Chlup Marek,Eagles-Praha,RF,RF,88.0,43.0,batter
+Pojer Jan,Eagles-Praha,LF,LF,521.0,41.7,batter
+Eagles-Praha-DH,Eagles-Praha,DH,DH,,33.8,batter
+Hejma Matěj,Eagles-Praha,CF,CF,196.0,50.5,batter
+Eagles-Praha-C,Eagles-Praha,C,C,,33.8,batter
+Bužga Vojtěch,Eagles-Praha,3B,3B,69.0,38.1,batter
+Zýma Michal,Eagles-Praha,2B,2B,721.0,43.2,batter
+Homolka Jan,Eagles-Praha,1B,1B,215.0,39.9,batter
+Menšík Vojtěch,Hrosi-Brno,SS,SS,417.0,45.0,batter
+Hussey John,Hrosi-Brno,SP,SP-1,225.0,45.6,starting_pitcher
+Kucin Jan,Hrosi-Brno,SP,SP-2,336.0,38.5,starting_pitcher
+Kraut Svatoslav,Hrosi-Brno,SP,SP-3,320.0,35.8,starting_pitcher
+Kollár Martin,Hrosi-Brno,RP,RP-1,292.0,38.1,relief_pitcher
+Puškár Michal,Hrosi-Brno,RP,RP-2,1214.0,36.3,relief_pitcher
+Novotný Petr,Hrosi-Brno,RP,RP-3,469.0,36.7,relief_pitcher
+Janoud Tomáš,Hrosi-Brno,RF,RF,241.0,41.7,batter
+Ondráček Michal,Hrosi-Brno,LF,LF,485.0,44.6,batter
+Dvořák Martin,Hrosi-Brno,DH,DH,138.0,39.0,batter
+Ondroušek Dan,Hrosi-Brno,CF,CF,483.0,38.1,batter
+Trunkát Lukáš,Hrosi-Brno,C,C,641.0,39.4,batter
+Claus Filip,Hrosi-Brno,3B,3B,100.0,40.8,batter
+Ondráček Jakub,Hrosi-Brno,2B,2B,484.0,42.7,batter
+Claus Filip,Hrosi-Brno,1B,1B,100.0,40.8,batter
+Vávra Robin,Nuclears-Trebic,SS,SS,1161.0,36.7,batter
+Hlouch Lukáš,Nuclears-Trebic,SP,SP-1,797.0,41.7,starting_pitcher
+Vávra Robin,Nuclears-Trebic,SP,SP-2,1161.0,37.6,starting_pitcher
+Mazura Martin,Nuclears-Trebic,SP,SP-3,1216.0,36.3,starting_pitcher
+Doležal Dominik,Nuclears-Trebic,RP,RP-1,802.0,36.3,relief_pitcher
+Libiak Jozef,Nuclears-Trebic,RP,RP-2,365.0,37.2,relief_pitcher
+Smejkal Lukáš,Nuclears-Trebic,RP,RP-3,1213.0,37.2,relief_pitcher
+Křivánek Michal,Nuclears-Trebic,RF,RF,1178.0,37.2,batter
+Doležal Dominik,Nuclears-Trebic,LF,LF,802.0,38.5,batter
+Nuclears-Trebic-DH,Nuclears-Trebic,DH,DH,,33.8,batter
+Sklenář David,Nuclears-Trebic,CF,CF,800.0,38.1,batter
+Pejchal Kamil,Nuclears-Trebic,C,C,803.0,38.1,batter
+Hamža Ivan,Nuclears-Trebic,3B,3B,191.0,39.0,batter
+Krejčiřík Marek,Nuclears-Trebic,2B,2B,551.0,40.3,batter
+Nuclears-Trebic-1B,Nuclears-Trebic,1B,1B,,33.8,batter
+Olympia-Blansko-SS,Olympia-Blansko,SS,SS,,33.8,batter
+Kostka Jakub,Olympia-Blansko,SP,SP-1,304.0,42.2,starting_pitcher
+Havlíček Štěpán,Olympia-Blansko,SP,SP-2,810.0,39.4,starting_pitcher
+Olympia-Blansko-SP-3,Olympia-Blansko,SP,SP-3,,33.8,starting_pitcher
+Jelínek Tomáš,Olympia-Blansko,RP,RP-1,804.0,37.6,relief_pitcher
+Hruby Jiri,Olympia-Blansko,RP,RP-2,,33.8,relief_pitcher
+Farkaš David,Olympia-Blansko,RP,RP-3,792.0,35.8,relief_pitcher
+Kučera Ivo,Olympia-Blansko,RF,RF,345.0,38.1,batter
+Němec Jaroslav,Olympia-Blansko,LF,LF,476.0,40.3,batter
+Kabeš Ladislav,Olympia-Blansko,DH,DH,842.0,39.4,batter
+Farkaš David,Olympia-Blansko,CF,CF,792.0,38.1,batter
+Olympia-Blansko-C,Olympia-Blansko,C,C,,33.8,batter
+Šebela Ondřej,Olympia-Blansko,3B,3B,1157.0,38.1,batter
+Hruby Jiri,Olympia-Blansko,2B,2B,,33.8,batter
+Olympia-Blansko-1B,Olympia-Blansko,1B,1B,,33.8,batter
+SABAT-Praha-SS,SABAT-Praha,SS,SS,,33.8,batter
+Vavruša Jiří,SABAT-Praha,SP,SP-1,656.0,39.0,starting_pitcher
+Hejtmánek Matěj,SABAT-Praha,SP,SP-2,,33.8,starting_pitcher
+SABAT-Praha-SP-3,SABAT-Praha,SP,SP-3,,33.8,starting_pitcher
+SABAT-Praha-RP-1,SABAT-Praha,RP,RP-1,,33.8,relief_pitcher
+SABAT-Praha-RP-2,SABAT-Praha,RP,RP-2,,33.8,relief_pitcher
+SABAT-Praha-RP-3,SABAT-Praha,RP,RP-3,,33.8,relief_pitcher
+SABAT-Praha-RF,SABAT-Praha,RF,RF,,33.8,batter
+SABAT-Praha-LF,SABAT-Praha,LF,LF,,33.8,batter
+SABAT-Praha-DH,SABAT-Praha,DH,DH,,33.8,batter
+SABAT-Praha-CF,SABAT-Praha,CF,CF,,33.8,batter
+SABAT-Praha-C,SABAT-Praha,C,C,,33.8,batter
+Tůma Jan,SABAT-Praha,3B,3B,,33.8,batter
+Dupal Štěpán,SABAT-Praha,2B,2B,123.0,33.8,batter
+Vítek Daniel,SABAT-Praha,1B,1B,688.0,33.8,batter
+Kelar Sebastian,Technika-Brno,SS,SS,852.0,35.8,batter
+Sobotka Michal,Technika-Brno,SP,SP-1,604.0,39.0,starting_pitcher
+Střítecký Martin,Technika-Brno,SP,SP-2,618.0,37.2,starting_pitcher
+Bláha Vojtěch,Technika-Brno,SP,SP-3,1166.0,36.7,starting_pitcher
+Střítecký Martin,Technika-Brno,RP,RP-1,618.0,37.2,relief_pitcher
+Kočí Michal,Technika-Brno,RP,RP-2,315.0,37.2,relief_pitcher
+Regner Martin,Technika-Brno,RP,RP-3,1164.0,37.6,relief_pitcher
+Menšík Matěj,Technika-Brno,RF,RF,416.0,41.3,batter
+Střítecký Martin,Technika-Brno,LF,LF,618.0,36.3,batter
+Kočí Michal,Technika-Brno,DH,DH,315.0,37.2,batter
+Sázavský Richard,Technika-Brno,CF,CF,624.0,39.4,batter
+Gottschall Mário,Technika-Brno,C,C,850.0,40.3,batter
+Berg Ryan,Technika-Brno,3B,3B,30.0,39.9,batter
+Kelar Sebastian,Technika-Brno,2B,2B,852.0,35.8,batter
+Budský Pavel,Technika-Brno,1B,1B,62.0,40.8,batter
+Nevěřil David,Tempo-Praha,SS,SS,465.0,39.4,batter
+Rabinowitz Jake,Tempo-Praha,SP,SP-1,547.0,47.0,starting_pitcher
+Minařík Marek,Tempo-Praha,SP,SP-2,424.0,39.9,starting_pitcher
+Nevěřil David,Tempo-Praha,SP,SP-3,465.0,38.1,starting_pitcher
+Vohánka David,Tempo-Praha,RP,RP-1,671.0,38.1,relief_pitcher
+Vrubel Adam,Tempo-Praha,RP,RP-2,678.0,35.8,relief_pitcher
+Čuhel Lubomír,Tempo-Praha,RP,RP-3,770.0,37.2,relief_pitcher
+Šusta Petr,Tempo-Praha,RF,RF,745.0,39.0,batter
+Nepomucký Aleš,Tempo-Praha,LF,LF,828.0,37.2,batter
+Minařík Marek,Tempo-Praha,DH,DH,424.0,39.9,batter
+Bečka Vojtěch,Tempo-Praha,CF,CF,825.0,37.2,batter
+Zelenka Martin,Tempo-Praha,C,C,712.0,38.1,batter
+Rabinowitz Jake,Tempo-Praha,3B,3B,547.0,43.2,batter
+Vohánka David,Tempo-Praha,2B,2B,671.0,40.3,batter
+Rejman Marek,Tempo-Praha,1B,1B,556.0,38.1,batter

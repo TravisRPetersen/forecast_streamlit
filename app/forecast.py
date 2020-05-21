@@ -14,7 +14,17 @@ with open('google-credentials.json', 'w') as f:
 logger = logging.getLogger(__name__)
 
 DIR_PATH = dirname(realpath(__file__))
-TEAM_LIST = {"kbo": ['Doosan-Bears', 'Hanwha-Eagles',
+TEAM_LIST = {"extraliga": ['Arrows-Ostrava',
+                           'Kotlarka-Praha',
+                           'Eagles-Praha',
+                           'Hrosi-Brno',
+                           'Draci-Brno',
+                           'Tempo-Praha',
+                           'Technika-Brno',
+                           'Nuclears-Trebic',
+                           'Olympia-Blansko',
+                           'SABAT-Praha'],
+            "kbo": ['Doosan-Bears', 'Hanwha-Eagles',
                      'KT-Wiz', 'Kia-Tigers', 'Kiwoom-Heroes',
                      'LG-Twins', 'Lotte-Giants',
                      'NC-Dinos', 'SK-Wyverns',
@@ -77,7 +87,7 @@ def main():
 
     page = st.sidebar.selectbox("Page", ["Projections & Depth Charts", "Game Predictions", "Depth Chart Image", "About"])
     year = st.sidebar.selectbox("Year", ["2020"])
-    league = st.sidebar.selectbox("League", ["KBO", "MLB"]).lower()
+    league = st.sidebar.selectbox("League", ["KBO", "MLB","Extraliga"]).lower()
 
 
     if page=="Projections & Depth Charts":
@@ -106,17 +116,26 @@ def main():
 
     if page=="Depth Chart Image":
 
-        kbo_team = st.sidebar.selectbox("Team", TEAM_LIST['kbo'])
-        st.subheader(f"{kbo_team}:")
-        st.image(f"https://storage.googleapis.com/baseball-forecast/kbo_depth_charts/{kbo_team}.png")
-        st.subheader("Note:")
-        st.markdown(
-            """    
-                These depth charts are a pre-season estimate and will not be updated on a regular basis. 
-                Starting pitchers are on the left-side of the graphic and relief pitchers on the right-side of the graphic.
-                
-                """
-                    )
+        if league=="mlb":
+            st.markdown(
+                """    
+                TBD                    
+                    """
+            )
+
+        else:
+
+            team = st.sidebar.selectbox("Team", TEAM_LIST[league])
+            st.subheader(f"{team}:")
+            st.image(f"https://storage.googleapis.com/baseball-forecast/{league}_depth_charts/{team}.png")
+            st.subheader("Note:")
+            st.markdown(
+                """    
+                    These depth charts are a pre-season estimate and will not be updated on a regular basis. 
+                    Starting pitchers are on the left-side of the graphic and relief pitchers on the right-side of the graphic.
+                    
+                    """
+                        )
 
     if page=="Game Predictions":
 
