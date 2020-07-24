@@ -64,8 +64,6 @@ TEAM_LIST = {"extraliga": ['Arrows-Ostrava',
 date = (datetime.today() + timedelta(hours=9)).strftime("%Y%m%d")
 storage_client = storage.Client().from_service_account_json("google-credentials.json")
 bucket = storage_client.bucket(bucket_name="baseball-forecast", user_project=None)
-blob = bucket.blob(f'kbo_schedule/game_data_{date}.json')
-game_schedule = json.loads(blob.download_as_string(client=None))
 
 def streamlit_dataframe(results, team_list):
     st.subheader("Team ratings are an average of player subgroup ratings")
@@ -85,7 +83,7 @@ def streamlit_dataframe(results, team_list):
 
 def main():
 
-    page = st.sidebar.selectbox("Page", ["Projections & Depth Charts", "Game Predictions", "Depth Chart Image", "About"])
+    page = st.sidebar.selectbox("Page", ["Projections & Depth Charts", "Depth Chart Image", "About"])
     year = st.sidebar.selectbox("Year", ["2020"])
     league = st.sidebar.selectbox("League", ["KBO", "MLB","Extraliga"]).lower()
 
@@ -136,33 +134,6 @@ def main():
                     
                     """
                         )
-
-    if page=="Game Predictions":
-
-        date = st.date_input("Game Date").strftime("%Y%m%d")
-
-        st.write("Predictions")
-        try:
-            # game_schedule = {}
-            games_on_date = game_schedule[date]
-
-            st.dataframe((pd.DataFrame(games_on_date)
-             .T
-             .astype({"home_win_proj": float})
-             .round(2)
-             .rename(columns={"away_team": "Away",
-                              "home_team": "Home",
-                              "status": "Status",
-                              "home_score": "Home Score",
-                              "away_score": "Away Score",
-                              "home_win_proj": "Home Win Pct"})
-             .reset_index(drop=True)
-             .style.format({'Home Win Pct': '{:.0%}',
-                            'Home Score': '{:.0f}',
-                            'Away Score': '{:.0f}'})))
-        except Exception as e:
-            logger.info(e)
-            st.write("No scheduled games for date")
 
     if page=="About":
         st.subheader("About:")
